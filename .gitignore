@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archives / temporary bundles
+app.tar.gz
+*.tar.gz
+*.zip
+*.7z
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Production / build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# PocketBase binaries and local runtime database
+apps/pocketbase/pocketbase
+apps/pocketbase/pocketbase.exe
+apps/pocketbase/pb_data/*
+!apps/pocketbase/pb_data/.gitkeep
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Editor & OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
