@@ -5,6 +5,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "node -e \"const { spawn } = require('child_process'); const fs = require('fs'); const bin = fs.existsSync('./pocketbase.exe') ? './pocketbase.exe' : (fs.existsSync('./pocketbase') ? './pocketbase' : null); if (bin) { spawn(bin, ['serve', '--http=0.0.0.0:8090', '--encryptionEnv=PB_ENCRYPTION_KEY', '--hooksWatch=false'], { stdio: 'inherit', shell: true }); } else { console.log('[pocketbase] Binary not found in apps/pocketbase (place pocketbase.exe to run backend). Skipping pocketbase serve.'); setInterval(() => {}, 10000); }\"",
+		"build": "echo [pocketbase] no build step required",
 		"start": "./pocketbase serve --http=0.0.0.0:8090 --encryptionEnv=PB_ENCRYPTION_KEY --dir=/data --migrationsDir=./pb_migrations --hooksDir=./pb_hooks --hooksWatch=false",
 		"migrations:up": "./pocketbase horizons migrations:up --encryptionEnv=PB_ENCRYPTION_KEY --dir=./pb_data --migrationsDir=./pb_migrations --hooksDir=./pb_hooks --hooksWatch=false",
 		"migrations:revert": "./pocketbase horizons migrations:revert --encryptionEnv=PB_ENCRYPTION_KEY --dir=./pb_data --migrationsDir=./pb_migrations --hooksDir=./pb_hooks --hooksWatch=false",
