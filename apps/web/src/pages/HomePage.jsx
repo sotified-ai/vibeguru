@@ -484,7 +484,7 @@ const HomePage = () => {
             </header>
 
             {/* Hero */}
-            <section id="top" className="relative min-h-[100dvh] flex items-end overflow-hidden pt-28 pb-12">
+            <section id="top" className="relative overflow-hidden pt-32 pb-16 lg:pt-36 lg:pb-20">
                 <div
                     aria-hidden
                     className="absolute -top-40 -right-40 h-[38rem] w-[38rem] rounded-full blur-3xl opacity-40"
