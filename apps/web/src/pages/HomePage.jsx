@@ -464,13 +464,22 @@ const HomePage = () => {
                             <a key={l} href={h} className="px-3 py-1.5 text-sm rounded-full hover:bg-[hsl(var(--ink)/0.07)] transition-colors">{l}</a>
                         ))}
                     </nav>
-                    <a
-                        href={`https://github.com/${GH_USER}`}
-                        target="_blank" rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--violet))] text-white px-4 py-2.5 text-sm font-semibold hover:bg-[hsl(var(--ink))] active:scale-[0.98] transition"
-                    >
-                        <Github className="h-4 w-4" strokeWidth={2} /> {GH_LABEL}
-                    </a>
+                    <div className="flex items-center gap-2">
+                        <a
+                            href="https://farrukh-khan.lovable.app/"
+                            target="_blank" rel="noreferrer"
+                            className="hidden md:inline-flex items-center gap-2 rounded-full bg-[hsl(var(--amber))] text-black px-4 py-2.5 text-sm font-semibold hover:brightness-110 active:scale-[0.98] transition"
+                        >
+                            <Globe className="h-4 w-4" /> Lovable Profile
+                        </a>
+                        <a
+                            href={`https://github.com/${GH_USER}`}
+                            target="_blank" rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--violet))] text-white px-4 py-2.5 text-sm font-semibold hover:bg-[hsl(var(--ink))] active:scale-[0.98] transition"
+                        >
+                            <Github className="h-4 w-4" strokeWidth={2} /> {GH_LABEL}
+                        </a>
+                    </div>
                 </div>
             </header>
 
@@ -800,6 +809,9 @@ const HomePage = () => {
                             Everything I make is public. Read the code, fork it, break it, tell me what you would have done differently.
                         </p>
                         <div className="mt-10 flex flex-wrap gap-3">
+                            <a href="https://farrukh-khan.lovable.app/" target="_blank" rel="noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[hsl(var(--amber))] text-[hsl(var(--amber))] px-6 text-sm font-semibold hover:bg-[hsl(var(--amber)/0.15)] active:scale-[0.98] transition">
+                                <Globe className="h-4 w-4" /> Lovable Profile <ArrowUpRight className="h-4 w-4" />
+                            </a>
                             <a href={`https://github.com/${GH_USER}`} target="_blank" rel="noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[hsl(var(--amber))] text-black px-6 text-sm font-semibold active:scale-[0.98] hover:brightness-110 transition">
                                 <Github className="h-4 w-4" /> Browse the repos
                             </a>
@@ -847,14 +859,11 @@ const HomePage = () => {
                         Got something <span className="font-serif-i italic font-normal">worth building?</span>
                     </h2>
                     <div className="flex flex-wrap gap-3 mb-14">
+                        <a href="https://farrukh-khan.lovable.app/" target="_blank" rel="noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[hsl(var(--amber))] text-black px-6 text-sm font-semibold hover:brightness-110 active:scale-[0.98] transition">
+                            <Globe className="h-4 w-4" /> Lovable Profile <ArrowUpRight className="h-4 w-4" />
+                        </a>
                         <a href="mailto:Farrukh.tuheed.khan@gmail.com" className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[hsl(var(--ink))] text-[hsl(var(--background))] px-6 text-sm font-semibold hover:bg-[hsl(var(--violet))] active:scale-[0.98] transition">
                             <Mail className="h-4 w-4" /> Farrukh.tuheed.khan@gmail.com
-                        </a>
-                        <a href="/contact" className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[hsl(var(--ink)/0.3)] px-6 text-sm font-semibold hover:bg-[hsl(var(--ink)/0.06)] active:scale-[0.98] transition">
-                            <Mail className="h-4 w-4" /> Contact form
-                        </a>
-                        <a href="/booking" className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[hsl(var(--amber))] text-black px-6 text-sm font-semibold hover:brightness-110 active:scale-[0.98] transition">
-                            Book a call
                         </a>
                         <a href={`https://github.com/${GH_USER}`} target="_blank" rel="noreferrer" className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[hsl(var(--ink)/0.3)] px-6 text-sm font-semibold hover:bg-[hsl(var(--ink)/0.06)] active:scale-[0.98] transition">
                             <Github className="h-4 w-4" /> {GH_LABEL}
