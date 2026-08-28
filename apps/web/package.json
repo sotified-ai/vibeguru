@@ -5,8 +5,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite --host :: --port 3000",
-		"build": "node tools/generate-llms.js || true && vite build --outDir ../../dist",
-		"start": "vite preview --outDir ../../dist --host :: --port 3000",
+		"build": "node tools/generate-llms.js || true && vite build --outDir dist && node -e \"const fs=require('fs'); fs.cpSync('dist', '../../dist', {recursive: true}); fs.cpSync('dist', '../../dist/apps/web', {recursive: true});\"",
+		"start": "vite preview --outDir dist --host :: --port 3000",
 		"lint": "eslint . --quiet; lint_status=$?; eslint \"src/**/*.jsx\" --config eslint.config.mjs --format ./eslint.unicode-escapes-formatter.mjs --no-error-on-unmatched-pattern; exit $lint_status",
 		"lint:warn": "eslint ."
 	},

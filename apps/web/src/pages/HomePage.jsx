@@ -11,6 +11,19 @@ const marqueeWords = ['React', 'TypeScript', 'Design Systems', 'Tailwind', 'Node
 // Comprehensive curated metadata for all sotified-ai repositories
 const CURATED_REPOS = [
     {
+        id: 'surah-muzammil-aligrapy',
+        name: 'surah-muzammil-aligrapy',
+        description: 'Interactive Surah Al-Muzzammil circular calligraphy canvas & Quranic typography visualizer. Built with React, TypeScript, and modern canvas rendering.',
+        language: 'TypeScript',
+        tags: ['TypeScript', 'React', 'Calligraphy', 'Islamic Art', 'Canvas'],
+        category: 'Web Applications',
+        isPrivate: false,
+        stargazers_count: 0,
+        forks_count: 0,
+        html_url: `https://github.com/${GH_USER}/surah-muzammil-aligrapy`,
+        pushed_at: '2026-08-28T10:06:08Z'
+    },
+    {
         id: 'vibeguru',
         name: 'vibeguru',
         description: 'Full-stack monorepo web application built with React, Vite, Tailwind CSS, and PocketBase backend. Features dynamic UI design, interactive tools, and expressive layout tokens.',
@@ -408,7 +421,11 @@ const HomePage = () => {
                     });
                 });
 
-                const finalArray = Array.from(mergedMap.values());
+                const finalArray = Array.from(mergedMap.values()).sort((a, b) => {
+                    const timeA = new Date(a.pushed_at || 0).getTime();
+                    const timeB = new Date(b.pushed_at || 0).getTime();
+                    return timeB - timeA;
+                });
                 setRepos(finalArray);
                 setStatus('ok');
             })
