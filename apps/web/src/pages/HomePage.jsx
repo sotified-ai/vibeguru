@@ -520,7 +520,7 @@ const HomePage = () => {
                                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}
                                 className="font-mono-c text-xs sm:text-sm uppercase tracking-[0.25em] text-[hsl(var(--ink)/0.6)] mb-6"
                             >
-                                Developer · Designer · Perpetual tinkerer
+                                Developer · Designer · PMP® Certified · Delivery Lead · Perpetual Tinkerer
                             </motion.p>
                             <h1 className="font-display font-extrabold leading-[0.86] tracking-[-0.04em] text-[clamp(3rem,11vw,10rem)]">
                                 {['Builds', 'that'].map((w, i) => (
